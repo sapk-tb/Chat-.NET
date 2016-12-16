@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
-using System.Linq;
-
 
 namespace Serveur
 {
@@ -83,7 +81,16 @@ namespace Serveur
         }
         public List<string> GetMessagesSince(int id)
         {
-            return (List<string>) _messages.Skip(id); //TODO
+            /*
+            List<string> l;
+            for (int i= id; i< _messages.Count;i++)
+            {
+                l.Add(_messages[i])
+            }
+            return l;
+            */
+            //return (List<string>) _messages.Skip(id); //TODO
+            return _messages.GetRange(id, _messages.Count - id);
         }
         public List<string> GetUsers()
         {

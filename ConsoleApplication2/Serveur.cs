@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
+using System.Threading;
 
 namespace Serveur
 {
@@ -73,28 +74,31 @@ namespace Serveur
                 return false; //Pseudo not logged
             }
             _messages.Add(DateTime.Now + "# " + user + ": " + message);
+            Thread.Sleep(3000);
             return true;
         }
         public List<string> GetMessages()
         {
+            Thread.Sleep(3000);
             return _messages;
         }
         public List<string> GetMessagesSince(int id)
         {
-            /*
-            List<string> l;
-            for (int i= id; i< _messages.Count;i++)
-            {
-                l.Add(_messages[i])
+            int start = id;
+            if (start > _messages.Count) {
+                start = _messages.Count;
             }
-            return l;
-            */
-            //return (List<string>) _messages.Skip(id); //TODO
-            return _messages.GetRange(id, _messages.Count - id);
+            Thread.Sleep(3000);
+            return _messages.GetRange(start, _messages.Count - start);
         }
         public List<string> GetUsers()
         {
+            Thread.Sleep(3000);
             return _users;
+        }
+        public int GetLastMessageId()
+        {
+            return _messages.Count;
         }
     }
 }

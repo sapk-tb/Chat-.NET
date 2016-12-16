@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
+using System.Windows.Threading;
 
 namespace Client
 {
@@ -10,7 +12,8 @@ namespace Client
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Timer refreshTimer;
+        private bool insync = false;
+        private System.Windows.Forms.Timer refreshTimer;
         private int lastMessageId = 0;
         private RemotingInterface.IRemotChaine LeRemot;
         public MainWindow()
@@ -21,7 +24,7 @@ namespace Client
             // l'objet LeRemot  récupére ici la référence de l'objet du serveur
             // on donne l'URI (serveur, port, classe du serveur)  et le nom de l'interface
             //LeRemot = (RemotingInterface.IRemotChaine)Activator.GetObject(typeof(RemotingInterface.IRemotChaine), "tcp://localhost:12345/Serveur");       
-            refreshTimer = new Timer();
+            refreshTimer = new System.Windows.Forms.Timer();
             refreshTimer.Tick += new EventHandler(refreshTimer_Tick);
 
             // Sets the timer interval to 5 seconds.
@@ -59,7 +62,11 @@ namespace Client
                 messageBox.Text = "";
                 sendBtn.IsEnabled = true;
                 //Login ok
-                refreshUI();
+                lastMessageId = LeRemot.GetLastMessageId(); //Start receveing message form now not anterior
+
+                //refreshUI();
+                Thread thread = new Thread(refreshUI);
+                thread.Start();
             } else
             {
                 pseudoBox.IsEnabled = true;
@@ -97,48 +104,86 @@ namespace Client
         }
         private void refreshTimer_Tick(object sender, EventArgs e)
         {
-            refreshUI();
+            //refreshUI();
+            if (sendBtn.IsEnabled && !insync) //We are logged
+            {
+                Thread thread = new Thread(refreshUI);
+                thread.Start();
+            }
         }
         private void refreshUI()
         {
-            if (!sendBtn.IsEnabled)
+            this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate ()
             {
-                //We are not logged 
-                return;
-            }
+                insync = true;
+            });
             //chatBox.Items.Clear(); //TODO only update from last point
             LeRemot.GetMessagesSince(lastMessageId).ForEach(delegate (string m)
             {
-                addToListBox(chatBox,m);
-                lastMessageId++;
+                this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate ()
+                {
+                    if (sendBtn.IsEnabled) { //we are still logegd
+                        addToListBox(chatBox,m);
+                        lastMessageId++;
+                    }
+                });
             });
-            usersBox.Items.Clear();
-            LeRemot.GetUsers().ForEach(delegate (string m)
+            var u = LeRemot.GetUsers();
+            this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate ()
             {
-                addToListBox(usersBox, m);
+                usersBox.Items.Clear();
+                if (sendBtn.IsEnabled)
+                { //we are still logegd
+                    u.ForEach(delegate (string m)
+                    {
+                        addToListBox(usersBox, m);
+                    });
+                }
+            });
+            this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate ()
+            {
+                insync = false;
             });
         }
-        private void Send_Click(object sender, RoutedEventArgs e)
+        private void SendMessage(string user, string message)
         {
-
-            if (LeRemot.SendMessage(pseudoBox.Text, messageBox.Text))
+            this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate ()
+            {
+                insync = true; //To block auto-refresh
+            });
+            if (LeRemot.SendMessage(user, message))
             {
                 //Success
                 System.Windows.MessageBox.Show("Message delivered", "Success !");
-                messageBox.Text = "";
+                //messageBox.Text = "";
+                this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate ()
+                {
+                    messageBox.Text = "";
+                });
             }
             else
             {
                 //Failed
                 System.Windows.MessageBox.Show("Failed to send message", "Warning !");
             }
-            refreshUI();
+            this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate ()
+            {
+                messageBox.IsEnabled = true;
+                sendBtn.IsEnabled = true;
+                //refreshUI();
+                Thread thread = new Thread(refreshUI);
+                thread.Start();
+            });
         }
-            /*
-    private void button_Click(object sender, RoutedEventArgs e)
-    {
-       textBlock.Text = LeRemot.Hello().ToString();
+        private void Send_Click(object sender, RoutedEventArgs e)
+        {
+            messageBox.IsEnabled = false;
+            sendBtn.IsEnabled = false;
+            string user = pseudoBox.Text;
+            string message = messageBox.Text;
+            Thread thread = new Thread(() => SendMessage(user, message));
+            thread.Start();
+        }
+
     }
-    */
-        }
 }

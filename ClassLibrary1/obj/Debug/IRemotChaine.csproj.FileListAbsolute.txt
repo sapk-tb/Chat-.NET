@@ -10,6 +10,5 @@ C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\
 C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
 \\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\ClassLibrary1\bin\Debug\ClassLibrary1.dll
 \\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
-\\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\ClassLibrary1\obj\Debug\IRemotChaine.csprojResolveAssemblyReference.cache
 \\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 \\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

@@ -30,8 +30,6 @@ C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\
 C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\Client2\obj\Debug\Client2.Properties.Resources.resources
 C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\Client2\obj\Debug\Client.csproj.GenerateResource.Cache
 \\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\Client2\bin\Debug\Client2.exe.config
-\\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\Client2\obj\Debug\Client2.exe
-\\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\Client2\obj\Debug\Client2.pdb
 \\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\Client2\bin\Debug\Client2.exe
 \\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\Client2\bin\Debug\Client2.pdb
 \\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\Client2\bin\Debug\ClassLibrary1.dll
@@ -45,3 +43,5 @@ C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\
 \\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\Client2\obj\Debug\Client2.g.resources
 \\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\Client2\obj\Debug\Client2.Properties.Resources.resources
 \\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\Client2\obj\Debug\Client.csproj.GenerateResource.Cache
+\\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\Client2\obj\Debug\Client2.exe
+\\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\Client2\obj\Debug\Client2.pdb

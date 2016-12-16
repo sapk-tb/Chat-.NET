@@ -15,6 +15,7 @@ namespace RemotingInterface
         bool SendMessage(string user, string message);
         List<string> GetMessages();
         List<string> GetMessagesSince(int id);
+        int GetLastMessageId();
         List<string> GetUsers();
     }
 }

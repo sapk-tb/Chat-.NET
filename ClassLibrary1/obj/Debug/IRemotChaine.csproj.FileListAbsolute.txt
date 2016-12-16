@@ -1,0 +1,10 @@
+c:\Users\edwin bourget\documents\visual studio 2015\Projects\TP3Cor\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+c:\Users\edwin bourget\documents\visual studio 2015\Projects\TP3Cor\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+c:\Users\edwin bourget\documents\visual studio 2015\Projects\TP3Cor\ClassLibrary1\obj\Debug\IRemotChaine.csprojResolveAssemblyReference.cache
+c:\Users\edwin bourget\documents\visual studio 2015\Projects\TP3Cor\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+c:\Users\edwin bourget\documents\visual studio 2015\Projects\TP3Cor\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ClassLibrary1\obj\Debug\IRemotChaine.csprojResolveAssemblyReference.cache
+C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

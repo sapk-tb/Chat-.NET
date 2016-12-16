@@ -1,0 +1,15 @@
+c:\Users\edwin bourget\documents\visual studio 2015\Projects\TP3Cor\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe.config
+c:\Users\edwin bourget\documents\visual studio 2015\Projects\TP3Cor\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe
+c:\Users\edwin bourget\documents\visual studio 2015\Projects\TP3Cor\ConsoleApplication2\bin\Debug\ConsoleApplication2.pdb
+c:\Users\edwin bourget\documents\visual studio 2015\Projects\TP3Cor\ConsoleApplication2\bin\Debug\ClassLibrary1.dll
+c:\Users\edwin bourget\documents\visual studio 2015\Projects\TP3Cor\ConsoleApplication2\bin\Debug\ClassLibrary1.pdb
+c:\Users\edwin bourget\documents\visual studio 2015\Projects\TP3Cor\ConsoleApplication2\obj\Debug\ConsoleApplication2.exe
+c:\Users\edwin bourget\documents\visual studio 2015\Projects\TP3Cor\ConsoleApplication2\obj\Debug\ConsoleApplication2.pdb
+C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe.config
+C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ConsoleApplication2\obj\Debug\ConsoleApplication2.exe
+C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ConsoleApplication2\obj\Debug\ConsoleApplication2.pdb
+C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe
+C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ConsoleApplication2\bin\Debug\ConsoleApplication2.pdb
+C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ConsoleApplication2\bin\Debug\ClassLibrary1.dll
+C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ConsoleApplication2\bin\Debug\ClassLibrary1.pdb
+C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ConsoleApplication2\obj\Debug\Serveur.csprojResolveAssemblyReference.cache

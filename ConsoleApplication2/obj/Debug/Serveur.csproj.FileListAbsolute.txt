@@ -13,3 +13,11 @@ C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\
 C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ConsoleApplication2\bin\Debug\ClassLibrary1.dll
 C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ConsoleApplication2\bin\Debug\ClassLibrary1.pdb
 C:\DAN\Cours\DotNet\BON_ALCARAC\TP\Sujet_TP_2013\Remoting\Chaine_WPF\Chaine_WPF\ConsoleApplication2\obj\Debug\Serveur.csprojResolveAssemblyReference.cache
+\\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe.config
+\\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe
+\\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\ConsoleApplication2\bin\Debug\ConsoleApplication2.pdb
+\\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\ConsoleApplication2\bin\Debug\ClassLibrary1.dll
+\\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\ConsoleApplication2\bin\Debug\ClassLibrary1.pdb
+\\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\ConsoleApplication2\obj\Debug\Serveur.csprojResolveAssemblyReference.cache
+\\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\ConsoleApplication2\obj\Debug\ConsoleApplication2.exe
+\\campus.enst-bretagne.fr\homes\agirar01\Visual Studio 2015\Projects\Chat\ConsoleApplication2\obj\Debug\ConsoleApplication2.pdb

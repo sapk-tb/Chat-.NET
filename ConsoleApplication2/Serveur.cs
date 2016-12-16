@@ -1,13 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
+using System.Linq;
 
 
 namespace Serveur
 {
     class Serveur : MarshalByRefObject, RemotingInterface.IRemotChaine
     {
+
+        List<string> _users = new List<string>(); //Our users list
+        List<string> _messages = new List<string>(); //Our users list
+
         static void Main(string[] args)
         {
             // Création d'un nouveau canal pour le transfert des données via un port 
@@ -29,11 +35,59 @@ namespace Serveur
         {
             return null;
         }
+        public bool Login(string user)
+        {
+            //throw new NotImplementedException();
+            if ("".Equals(user))
+            {
+                return false; //Empty
+            }
+            if (_users.Contains(user))
+            {
+                return false; //Pseudo allready exist
+            }
+            _users.Add(user);
+            _messages.Add(DateTime.Now + "# " + user + " is connected !");
+            return true;
+        }
+        public bool Logout(string user)
+        {
+            if ("".Equals(user))
+            {
+                return false;
+            }
+            _messages.Add(DateTime.Now+"# "+user + " is gone !");
+            return _users.Remove(user);
+        }
         public string Hello()
         {
-            // TODO : ajoutez l'implémentation de Serveur.Hello
-            return "la chaine se trouvant sur le serveur";
+            return "Welcome on this server";
         }
 
+        public bool SendMessage(string user, string message)
+        {
+            if ("".Equals(user) || "".Equals(message))
+            {
+                return false; //Empty
+            }
+            if (!_users.Contains(user))
+            {
+                return false; //Pseudo not logged
+            }
+            _messages.Add(DateTime.Now + "# " + user + ": " + message);
+            return true;
+        }
+        public List<string> GetMessages()
+        {
+            return _messages;
+        }
+        public List<string> GetMessagesSince(int id)
+        {
+            return (List<string>) _messages.Skip(id); //TODO
+        }
+        public List<string> GetUsers()
+        {
+            return _users;
+        }
     }
 }

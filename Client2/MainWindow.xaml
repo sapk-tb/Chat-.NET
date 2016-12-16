@@ -7,8 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="242,105,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="107,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
-
+        <Menu DockPanel.Dock="Top" Margin="0,0,0,301">
+            <MenuItem Header="Login" Click="Login_Click" />
+            <MenuItem Header="Disconnect" Click="Logout_Click" />
+        </Menu>
+        <ListBox x:Name="chatBox" Margin="10,59,229,38"/>
+        <TextBox x:Name="messageBox"  HorizontalAlignment="Left" Height="23" Margin="10,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="442" IsEnabled="False" SpellCheck.IsEnabled="True" ToolTip="Message à envoyer" Text="Message à envoyer"/>
+        <Button x:Name="sendBtn" Content="Send" HorizontalAlignment="Left" Margin="457,290,0,0" VerticalAlignment="Top" Width="50" IsEnabled="False" Click="Send_Click"/>
+        <GroupBox x:Name="configGroupBox" Header="Configuration" HorizontalAlignment="Left" Margin="293,27,0,0" VerticalAlignment="Top" Height="110" Width="214"/>
+        <TextBox x:Name="hostBox" HorizontalAlignment="Left" Height="23" Margin="376,49,0,0" TextWrapping="Wrap" Text="localhost" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="hostLabel" Content="Server :" HorizontalAlignment="Left" Margin="302,47,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="portBox" HorizontalAlignment="Left" Height="23" Margin="376,77,0,0" TextWrapping="Wrap" Text="12345" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="portLabel" Content="Port :" HorizontalAlignment="Left" Margin="302,75,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="pseudoBox" HorizontalAlignment="Left" Height="23" Margin="376,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="pseudolabel" Content="Pseudo :" HorizontalAlignment="Left" Margin="302,103,0,0" VerticalAlignment="Top"/>
+        <GroupBox x:Name="usersGroupBox" Header="Users" HorizontalAlignment="Left" Margin="293,142,0,0" VerticalAlignment="Top" Height="143" Width="214"/>
+        <ListBox x:Name="usersBox" Margin="302,157,21,48"/>
+        <TextBox x:Name="serverMessBox" HorizontalAlignment="Left" Height="23" Margin="10,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="278" IsEnabled="False"/>
     </Grid>
 </Window>
